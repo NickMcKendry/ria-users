@@ -1,1 +1,1 @@
-# React Redux firebase Boilerplate
+# RIA Users Code Challenge

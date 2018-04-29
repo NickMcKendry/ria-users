@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import UsersSummary from './UsersSummary';
+import UserListFilters from './UserListFilters';
+import UserList from './UserList';
 
 const DashboardPage = () => (
   <div>
-    <p>DashboardPage content</p>
+    <UsersSummary />
+    <UserListFilters />
+    <UserList />
   </div>
 );
 
