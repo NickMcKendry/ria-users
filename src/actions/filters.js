@@ -27,7 +27,7 @@ export const sortByAddress = () => ({
 
 // SET_START_DATE
 
-export const setStartDate = (date) => ({
+export const setbirthDate = (date) => ({
   type: 'SET_START_DATE',
   date
 });

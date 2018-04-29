@@ -9,8 +9,8 @@ export default class UserForm extends React.Component {
     this.state = {
       firstName: props.user ? props.user.firstName : '',
       lastName: props.user ? props.user.lastName : '',
-      address: props.user ? props.expense.address : '',
-      createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+      address: props.user ? props.user.address : '',
+      createdAt: props.user ? moment(props.user.createdAt) : moment(),
       calendarFocused: false,
       error: ''
     };
@@ -84,6 +84,7 @@ export default class UserForm extends React.Component {
             onChange={this.onAddressChange}
             className="text-input"
           />
+          <span>Birth Date</span>
           <SingleDatePicker
             date={this.state.createdAt}
             onDateChange={this.onDateChange}

@@ -3,7 +3,7 @@ import moment from 'moment';
 const filtersReducerDefaultState = {
   text: '',
   sortBy: 'date',
-  startDate: moment().startOf('month'),
+  birthDate: moment().startOf('month'),
   endDate: moment().endOf('month')
 };
 
@@ -37,7 +37,7 @@ export default (state = filtersReducerDefaultState, action) => {
     case 'SET_START_DATE' :
       return {
         ...state,
-        startDate: action.date
+        birthDate: action.date
       };
     case 'SET_END_DATE' :
       return {

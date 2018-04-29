@@ -6,8 +6,8 @@ import { startLogin } from '../actions/auth';
 export const LoginPage = ({ startLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h1 className="box-layout__title">Boilerplate v2</h1>
-      <p>App Tagline</p>
+      <h1 className="box-layout__title">RIA Users</h1>
+      <p>User Management</p>
       <button onClick={startLogin} className="button">Login With Google</button>
     </div>
   </div>

@@ -1,6 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
+import {
+  setTextFilter,
+  sortByDate,
+  sortByFirstName,
+  sortByLastName,
+  sortByAddress,
+  setbirthDate,
+  setEndDate
+} from '../actions/filters';
 import { DateRangePicker } from 'react-dates';
 
 
@@ -10,8 +18,8 @@ export class UserListFilters extends React.Component {
 
   };
 
-  onDatesChange = ({ startDate, endDate }) => {
-    this.props.setStartDate(startDate);
+  onDatesChange = ({ birthDate, endDate }) => {
+    this.props.setbirthDate(birthDate);
     this.props.setEndDate(endDate);
   };
 
@@ -28,11 +36,11 @@ export class UserListFilters extends React.Component {
       if(e.target.value === 'date'){
         this.props.sortByDate();
       } else if(e.target.value === 'first-name'){
-        this.props.sortByAmount();
+        this.props.sortByFirstName();
       } else if(e.target.value === 'last-name'){
-        this.props.sortByAmount();
+        this.props.sortByLastName();
       } else if(e.target.value === 'address'){
-        this.props.sortByAmount();
+        this.props.sortByAddress();
       }
     };
 
@@ -63,7 +71,7 @@ export class UserListFilters extends React.Component {
           </div>
           <div className="input-group__item">
             <DateRangePicker
-              startDate={this.props.filters.startDate}
+              startDate={this.props.filters.birthDate}
               endDate={this.props.filters.endDate}
               onDatesChange={this.onDatesChange}
               focusedInput={this.state.calendarFocused}
@@ -71,7 +79,7 @@ export class UserListFilters extends React.Component {
               showClearDates={true}
               numberOfMonths={1}
               isOutsideRange={() => false}
-              startDateId="startDate1"
+              startDateId="birthDate1"
               endDateId="endDate1"
             />
           </div>
@@ -88,8 +96,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   setTextFilter: (text) => dispatch(setTextFilter(text)),
   sortByDate: () => dispatch(sortByDate()),
-  sortByAmount: () => dispatch(sortByAmount()),
-  setStartDate: (startDate) => dispatch(setStartDate(startDate)),
+  sortByFirstName: () => dispatch(sortByFirstName()),
+  sortByLastName: () => dispatch(sortByLastName()),
+  sortByAddress: () => dispatch(sortByAddress()),
+  setbirthDate: (birthDate) => dispatch(setbirthDate(birthDate)),
   setEndDate: (endDate) => dispatch(setEndDate(endDate))
 });
 

@@ -1,17 +1,19 @@
 import moment from 'moment';
 
-export default (users, { text, sortBy, startDate, endDate }) => {
+export default (users, { text, sortBy, birthDate, endDate }) => {
 
   return users.filter((user) => {
     const createdAtMoment = moment(user.createdAt)
 
-    const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
+    const birthDateMatch = birthDate ? birthDate.isSameOrBefore(createdAtMoment, 'day') : true;
 
     const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
 
-    const textMatch = user.description.toLowerCase().includes(text.toLowerCase());
+    const name = user.firstName + user.lastName
 
-    return startDateMatch && endDateMatch && textMatch;
+    const textMatch = name.toLowerCase().includes(text.toLowerCase());
+
+    return birthDateMatch && endDateMatch && textMatch;
   }).sort((a, b) => {
     if(sortBy === 'date') {
       return a.createdAt < b.createdAt ? 1 : -1;

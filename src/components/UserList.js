@@ -17,8 +17,8 @@ export const UserList = (props) => (
           <span>No users</span>
         </div>
       ) : (
-        props.expenses.map((user) => (
-          <ExpenseListItem key={user.id} {...user} />
+        props.users.map((user) => (
+          <UserListItem key={user.id} {...user} />
         ))
       )
     }
