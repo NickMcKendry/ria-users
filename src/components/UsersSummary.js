@@ -1,5 +1,4 @@
 import React from 'react';
-import numeral from 'numeral';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import getVisibleUsers from '../selectors/users';

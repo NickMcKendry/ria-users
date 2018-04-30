@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 
 
@@ -10,8 +9,6 @@ export default class UserForm extends React.Component {
       firstName: props.user ? props.user.firstName : '',
       lastName: props.user ? props.user.lastName : '',
       address: props.user ? props.user.address : '',
-      createdAt: props.user ? moment(props.user.createdAt) : moment(),
-      calendarFocused: false,
       error: ''
     };
   };
@@ -32,16 +29,6 @@ export default class UserForm extends React.Component {
     this.setState(() => ({ address }))
   };
 
-  onDateChange = (createdAt) => {
-    if(createdAt){
-      this.setState(() => ({ createdAt }));
-    }
-  };
-
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ calendarFocused: focused }))
-  };
-
   onSubmit = ((e) => {
     e.preventDefault();
 
@@ -52,7 +39,6 @@ export default class UserForm extends React.Component {
       this.props.onSubmit({
         firstName: this.state.firstName,
         lastName: this.state.lastName,
-        createdAt: this.state.createdAt.valueOf(),
         address: this.state.address
       })
     }
@@ -83,15 +69,6 @@ export default class UserForm extends React.Component {
             value={this.state.address}
             onChange={this.onAddressChange}
             className="text-input"
-          />
-          <span>Birth Date</span>
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
           />
             <div>
               <button className="button">Save User</button>

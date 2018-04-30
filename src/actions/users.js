@@ -14,14 +14,12 @@ export const startAddUser = (userData = {}) => {
       firstName = '',
       lastName = '',
       address = 0,
-      createdAt = 0
     } = userData;
 
     const user = {
       firstName,
       lastName,
       address,
-      createdAt
     };
 
     return database.ref(`users/${uid}/users`).push(user).then((ref) => {
