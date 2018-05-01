@@ -1,5 +1,4 @@
 # RIA Users Code Challenge
-
 ##Technolgies Used
 *React v16
 *Redux
