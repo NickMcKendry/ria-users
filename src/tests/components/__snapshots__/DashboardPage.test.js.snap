@@ -2,8 +2,8 @@
 
 exports[`Should render dashboard correctly 1`] = `
 <div>
-  <p>
-    DashboardPage content
-  </p>
+  <Connect(UsersSummary) />
+  <Connect(UserListFilters) />
+  <Connect(UserList) />
 </div>
 `;

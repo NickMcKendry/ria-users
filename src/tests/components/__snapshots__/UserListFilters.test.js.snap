@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render UserListFilters 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group__item"
+    >
+      <input
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Search Users"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+        value="first-name"
+      >
+        <option
+          value="first-name"
+        >
+          First Name
+        </option>
+        <option
+          value="last-name"
+        >
+          Last Name
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Should render UserListFilters with alt data 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group__item"
+    >
+      <input
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Search Users"
+        type="text"
+        value="Bob"
+      />
+    </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+        value="last-name"
+      >
+        <option
+          value="first-name"
+        >
+          First Name
+        </option>
+        <option
+          value="last-name"
+        >
+          Last Name
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

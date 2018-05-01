@@ -13,7 +13,7 @@ export const startAddUser = (userData = {}) => {
     const {
       firstName = '',
       lastName = '',
-      address = 0,
+      address = '',
     } = userData;
 
     const user = {

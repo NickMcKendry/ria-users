@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render UserForm 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="First Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Last Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Address"
+    type="text"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Save User
+    </button>
+  </div>
+</form>
+`;
+
+exports[`Should render UserForm with data 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="First Name"
+    type="text"
+    value="Nick"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Last Name"
+    type="text"
+    value="McKendry"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Address"
+    type="text"
+    value="9803 w. 83rd ave."
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Save User
+    </button>
+  </div>
+</form>
+`;
+
+exports[`Should render error for invalid form submission 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="First Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Last Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Address"
+    type="text"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Save User
+    </button>
+  </div>
+</form>
+`;
+
+exports[`Should render error for invalid form submission 2`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <p
+    className="form__error"
+  >
+    Please provide a firstName, lastName and address!
+  </p>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="First Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Last Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Address"
+    type="text"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Save User
+    </button>
+  </div>
+</form>
+`;

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render EditUserPage 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit user
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <UserForm
+      onSubmit={[Function]}
+      user={
+        Object {
+          "address": "9803 w. 83rd ave.",
+          "firstName": "John",
+          "id": "2",
+          "lastName": "Doe",
+        }
+      }
+    />
+    <button
+      className="button button--secondary"
+      onClick={[Function]}
+    >
+      Remove User
+    </button>
+  </div>
+</div>
+`;

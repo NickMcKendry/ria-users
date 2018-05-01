@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render user list item 1`] = `
+<Link
+  className="list-item"
+  replace={false}
+  to="/edit/1"
+>
+  <div>
+    <h3
+      className="list-item__title"
+    >
+      Nick
+       
+      McKendry
+    </h3>
+  </div>
+  <h3
+    className="list-item__data"
+  >
+    9803 w. 83rd ave.
+  </h3>
+</Link>
+`;

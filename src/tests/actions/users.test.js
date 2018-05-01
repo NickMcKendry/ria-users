@@ -37,7 +37,7 @@ test('Should setup object to edit user', () => {
   const action = editUser('1', { firstName: 'Bob' });
   expect(action).toEqual({
     type: 'EDIT_USER',
-    updates: { firstName : 'bob'},
+    updates: { firstName : 'Bob'},
     id: '1'
   });
 });
@@ -51,7 +51,7 @@ test('Should setup object to add user with provided values', () => {
   const action = addUser(users[2]);
   expect(action).toEqual({
     type: 'ADD_USER',
-    user: user[2]
+    user: users[2]
   });
 });
 
@@ -76,7 +76,7 @@ test('should add user to database and store', (done) => {
     return database.ref(`users/${uid}/users/${actions[0].user.id}`)
     .once('value')
   }).then((snapshot) => {
-    expect(snapshot.val()).toEqual(usereData);
+    expect(snapshot.val()).toEqual(userData);
     done();
   });
 });

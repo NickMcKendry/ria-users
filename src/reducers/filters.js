@@ -2,7 +2,7 @@ import moment from 'moment';
 
 const filtersReducerDefaultState = {
   text: '',
-  sortBy: 'date'
+  sortBy: 'first-name'
 };
 
 export default (state = filtersReducerDefaultState, action) => {

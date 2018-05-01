@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render user list with no users 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Users
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      User
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Address
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No users
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Should render user list with users 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Users
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      User
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Address
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <UserListItem
+      address="9803 w. 83rd ave."
+      firstName="Nick"
+      id="1"
+      key="1"
+      lastName="McKendry"
+    />
+    <UserListItem
+      address="9803 w. 83rd ave."
+      firstName="John"
+      id="2"
+      key="2"
+      lastName="Doe"
+    />
+    <UserListItem
+      address="9803 w. 83rd ave."
+      firstName="Jane"
+      id="3"
+      key="3"
+      lastName="Dae"
+    />
+  </div>
+</div>
+`;

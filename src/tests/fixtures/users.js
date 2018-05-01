@@ -12,6 +12,6 @@ export default [{
 }, {
   id: '3',
   firstName: 'Jane',
-  lastName: 'Doe',
+  lastName: 'Dae',
   address: '9803 w. 83rd ave.',
 }]
